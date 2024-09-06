@@ -9,7 +9,7 @@ const CategorySearch = () => {
         <div className='flex w-full max-w-sm items-center'>
         <input type="text" className='border mr-3 rounded-sm w-[250px] pl-2' placeholder="Encuentra doctores"></input>
         <Button>Buscar</Button>
-        <p>Hola esto es una prueba</p>
+        
         </div>
         
       
