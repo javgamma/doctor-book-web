@@ -1,5 +1,6 @@
 import { Outfit } from "next/font/google";
 import "./globals.css";
+import Footer from "./_components/Footer";
 import Header from "./_components/Header";
 
 const outfit = Outfit({ subsets: ["latin"] });
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
           <Header />
           {children}
         </div>
+          <Footer/>
       </body>
     </html>
   );
