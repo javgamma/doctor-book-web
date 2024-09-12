@@ -1,9 +1,12 @@
+"use client"
 import { Button } from '@/components/ui/button'
+import { LoginLink, LogoutLink, useKindeAuth, useKindeBrowserClient } from '@kinde-oss/kinde-auth-nextjs'
 import { Activity, HeartPulse } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Logotype from './Logotype'
+
 
 const Header = () => {
     const menu = [
@@ -25,6 +28,23 @@ const Header = () => {
         }
     ] 
     
+const {isAuthenticated} = useKindeBrowserClient();
+console.log(isAuthenticated);
+    const {user,getUser} = useKindeBrowserClient();
+    const alsoUser = getUser();
+
+    // const [isLoading, setIsLoading]= useState(true);
+
+console.log(alsoUser)
+
+useEffect(()=>{
+  console.log(alsoUser);
+},[user])
+console.log(user);
+
+<div></div>
+
+
   return (
     <div className="flex items-center justify-between p-4 shadow-sm">
       <div className="flex items-center gap-10">
@@ -45,7 +65,29 @@ const Header = () => {
           ))}
         </ul>
       </div>
-      <Button>Sign in </Button>
+      {isAuthenticated ? (
+                <div className="flex items-center gap-4">
+                    <span>Bienvenido, {user?.given_name || user?.email}</span>
+                    <LogoutLink>
+                        <Button>Cerrar sesión</Button>
+                    </LogoutLink>
+                </div>
+            ) : (
+                <LoginLink>
+                    <Button>Iniciar sesión</Button>
+                </LoginLink>
+            )}
+            <div>
+              <Image
+              src={user?.picture}
+              width={45}
+              height={45}
+              alt="icon"
+              className='rounded-full'>
+
+              </Image>
+            </div>
+
     </div>
   );
 
