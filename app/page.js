@@ -11,17 +11,6 @@ import GlobalApi from "./_utils/GlobalApi";
 
 export default function Home() {
 
-  // const [doctorList, setDoctorList] = useState([]);
-  // useEffect(()=>{
-  //   getDoctorList()
-  // },[])
-
-  // const getDoctorList=()=>{
-  //   GlobalApi.getDoctorList().then(responseDoctor=>{
-  //     console.log(responseDoctor.data.data);
-  //     setDoctorList(responseDoctor.data.data)
-  //   })
-  // }
 
   const [doctorList, setDoctorList] = useState([]);
 

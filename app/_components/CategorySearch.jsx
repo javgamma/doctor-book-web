@@ -100,6 +100,7 @@ const CategorySearch = () => {
     GlobalApi.getCategory().then((response) => {
       if (response.data && Array.isArray(response.data.data)) {
         setCategoryList(response.data.data);
+        console.log(response);
       } else {
         console.error("Unexpected response format:", response);
       }
