@@ -51,12 +51,25 @@ const DoctorList = ({doctorList,heading="Doctores Populares"}) => {
         ))
       :
       //Skelton Effect
-      [1,2,3,4,5,6].map((item, index)=>(
-      <div className='h-[350px] bg-slate-200 w-[240px] rounded-lg animate-pulse'>
+      // [1,2,3,4,5,6].map((item, index)=>(
+      // <div className='h-[350px] bg-slate-200 w-[240px] rounded-lg animate-pulse'>
 
-      </div>
+      // </div>
 
-      ))
+      // ))
+      /* From Uiverse.io by Deri-Kurniawan */ 
+<div
+  className="flex flex-col bg-neutral-300 w-56 h-[400px] animate-pulse rounded-xl p-4 gap-4"
+>
+  <div className="bg-neutral-400/50 w-full h-64 animate-pulse rounded-md"></div>
+  <div className="flex flex-col gap-2">
+    <div className="bg-neutral-200/50 w-full min-h-4 animate-pulse rounded-md"></div>
+    <div className="bg-neutral-400/50 w-4/5 h-4 animate-pulse rounded-md"></div>
+    <div className="bg-neutral-300/50 w-full h-4 animate-pulse rounded-md"></div>
+    <div className="bg-neutral-500/50 w-2/4 h-4 animate-pulse rounded-md"></div>
+  </div>
+</div>
+
       }
       </div>
     </div>

@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { translateCategory } from '../_utils/translations';
+import Link from 'next/link';
 
 const DoctorCard = ({doctor}) => {
   return (
@@ -21,12 +22,14 @@ const DoctorCard = ({doctor}) => {
           <h2 className='text-primary text-sm'>{doctor.attributes?.Year_of_Experience} años</h2>
           <h2 className='text-gray-400 text-sm'>{doctor.attributes?.Address}</h2>
         </div>
+        <Link href={'/details/'+doctor?.id} className="w-full">
         <button 
           className='mt-auto bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors duration-300 w-full'
-          onClick={() => alert('Funcionalidad de agendar cita por implementar')}
+          // onClick={() => alert('Funcionalidad de agendar cita por implementar')}
         >
           Agendar Cita
         </button>
+        </Link>
       </div>
     </div>
   )

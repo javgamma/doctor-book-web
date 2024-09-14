@@ -1,3 +1,4 @@
+import Footer from '@/app/_components/Footer';
 import React from 'react'
 import CategoryList from './_components/CategoryList';
 
@@ -8,9 +9,10 @@ const layout = ({children}) => {
         {/* //Categories */}
         <CategoryList/>
         </div>
-        <div className="col-span-4 md:col-span-3">
+        <div className="col-span-4 md:col-span-3 min-h-screen">
         {children}
         </div>
+        {/* <Footer/> */}
     </div>
   );
 }

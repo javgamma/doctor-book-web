@@ -162,11 +162,11 @@ const CategorySearch = () => {
     </div>
 
     {/** Lista de Categorías */}
-    <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+    <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6" >
       {categoryList.length > 0 ? categoryList.map((category) => (
-        <Link href={"/search/"+category.attributes?.Name}>
+        <Link href={"/search/"+category.attributes?.Name} key={category.id}>
           <div
-            key={category.id}
+            
             className="flex flex-col text-center items-center mt-6 justify-center p-5 gap-2 bg-gray-100 m-2 rounded-xl cursor-pointer hover:scale-110 transition-all ease-in-out"
           >
             <Image
