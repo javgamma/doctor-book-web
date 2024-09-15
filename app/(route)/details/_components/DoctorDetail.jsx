@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { GraduationCap, MapPin } from 'lucide-react';
 import Image from 'next/image'
 import React from 'react'
+import BookAppointment from './BookAppointment';
 
 const DoctorDetail = ({doctor}) => {
 
@@ -66,7 +67,7 @@ const DoctorDetail = ({doctor}) => {
             <Image src={item.icon} key={item} width={30} height={30} />
           ))}
         </div>
-        <Button className="mt-3 rounded-full"> Agendar cita</Button>
+        <BookAppointment/>
       </div>
       </div>
       <div className='p-3 border-[1px] rounded-lg mt-5  sm:w-[460px] lg:w-[850px]'>
