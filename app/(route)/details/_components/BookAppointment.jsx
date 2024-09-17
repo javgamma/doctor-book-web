@@ -12,18 +12,27 @@ import {
   } from "@/components/ui/dialog"
 import { Button } from '@/components/ui/button'
 import { Calendar } from "@/components/ui/calendar"
-import { CalendarDays, Clock } from 'lucide-react'
+import { CalendarDays, Clock, DoorClosed } from 'lucide-react'
 import { useKindeBrowserClient } from '@kinde-oss/kinde-auth-nextjs'
 import { Textarea } from '@/components/ui/textarea'
+import GlobalApi from '@/app/_utils/GlobalApi'
+import { toast } from 'sonner'
 
   
 
-const BookAppointment = () => {
+const BookAppointment = ({doctor}) => {
     const [date, setDate]=useState(new Date());
     const [timeSlot,setTimeSlot]=useState();
     const [selectedTimeSlot,setSelectedTimeSlot]=useState();
     const [note,setNote]=useState();
     const {user}=useKindeBrowserClient();
+
+  //   useEffect(() => {
+  //     if (!doctor || !doctor.id) {
+  //         console.error('Doctor prop is missing or does not have an id', doctor);
+  //     }
+  // }, [doctor]);
+
     useEffect(()=>{
       getTime();
     },[])
@@ -50,6 +59,35 @@ const BookAppointment = () => {
       }
 
       setTimeSlot(timeList)
+    }
+
+
+    const saveBooking=()=>{
+      const formattedDate = date.toISOString().split('T')[0]
+      const data={
+
+        data:{
+          Username:user.given_name+" "+user.family_name,
+          Email:user.email,
+          Time:selectedTimeSlot,
+          Date:formattedDate,
+          doctor: doctor.data.id,
+          Note:note
+        }
+      }
+      console.log(data)
+
+      GlobalApi.bookAppointment(data).then(resp=>{
+        console.log(resp);
+        if(resp)
+        {
+          GlobalApi.sendEmail(data).then(resp=>{
+            console.log(resp)
+          })
+          toast("Cita agendada, revise su email")
+        }
+      })
+
     }
 
     const isPastDay=(day)=>{

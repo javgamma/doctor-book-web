@@ -64,10 +64,10 @@ const DoctorDetail = ({doctor}) => {
         </h2>
         <div className="flex gap-3 mt-4">
           {socialMediaList.map((item, index) => (
-            <Image src={item.icon} key={item} width={30} height={30} />
+            <Image src={item.icon} key={index} width={30} height={30} />
           ))}
         </div>
-        <BookAppointment/>
+        <BookAppointment doctor={doctor}/>
       </div>
       </div>
       <div className='p-3 border-[1px] rounded-lg mt-5  sm:w-[460px] lg:w-[850px]'>

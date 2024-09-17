@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button'
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 const Hero = () => {
@@ -10,7 +11,7 @@ const Hero = () => {
         <div className="relative h-64 overflow-hidden rounded-lg sm:h-80 lg:order-last lg:h-full">
           <Image
             alt=""
-            src="/doctorsGroup.jpg"
+            src="/doctoresNuevos.jpg"
             width={800}
             height={800}
             className="absolute inset-0 h-full w-full object-cover rounded-xl"
@@ -30,8 +31,10 @@ const Hero = () => {
             eius quos ea neque sunt, accusantium soluta minus veniam tempora deserunt? Molestiae eius
             quidem quam repellat.
           </p>
-  
+
+          <Link href={"/search/Cardiologist"}>
           <Button className="mt-5">Agendar cita</Button>
+          </Link>
         </div>
       </div>
     </div>

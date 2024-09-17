@@ -113,54 +113,17 @@ const CategorySearch = () => {
 
 
   return (
-    // <div className="mb-10 items-center flex flex-col gap-4 px-5">
-    //   <h2 className="font-bold text-4xl tracking-wide">Buscar médicos</h2>
-    //   <h2 className="text-gray-500">
-    //     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi cumque{" "}
-    //   </h2>
-
-    //   <div className="flex w-full max-w-sm mt-3 items-center space-x-2">
-    //     <Input type="text" placeholder="Busca tu medico" />
-    //     <Button type="submit">Buscar</Button>
-    //   </div>
-
-    //   {/** Lista de Categorías */}
-    //   <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
-    //     {categoryList.length > 0 ? categoryList.map((category) => (
-    //       <Link href={"/search/"+category.attributes?.Name}>
-    //       <div
-    //         key={category.id}
-    //         className="flex flex-col text-center items-center mt-6 justify-center p-5 gap-2 bg-gray-100 m-2 rounded-xl cursor-pointer hover:scale-110 transition-all ease-in-out"
-    //       >
-    //         <Image
-    //           src={category.attributes?.Icon?.data.attributes?.url}
-    //           alt="icon"
-    //           width={40}
-    //           height={40}
-    //         />
-    //         <label>{category?.attributes.Name}</label>
-    //       </div>
-    //       </Link>
-    //     )) : 
-    //     [1,2,3,4,5,6,7,8,9].map((item, index) => (
-    //       <div
-    //         key={index}
-    //         className="bg-slate-200 m-2 animate-pulse w-[130px] h-[120px] rounded-lg"
-    //       />
-    //     ))}
-    //   </div>
-    // </div>
-
+    
     <div className="mb-10 items-center flex flex-col gap-4 px-5">
-    <h2 className="font-bold text-4xl tracking-wide">Buscar médicos</h2>
-    <h2 className="text-gray-500">
+    <h2 className="font-bold text-4xl tracking-wide">Categorías</h2>
+    {/* <h2 className="text-gray-500">
       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi cumque
     </h2>
 
     <div className="flex w-full max-w-sm mt-3 items-center space-x-2">
       <Input type="text" placeholder="Busca tu medico" />
       <Button type="submit">Buscar</Button>
-    </div>
+    </div> */}
 
     {/** Lista de Categorías */}
     <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6" >

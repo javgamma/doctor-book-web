@@ -182,8 +182,10 @@ const Header = () => {
             </PopoverTrigger>
             <PopoverContent className="w-30 mr-1">
               <ul className='flex flex-col gap-2 mr'>
-                <li className='hover:bg-slate-200 cursor-pointer p-1 rounded-md flex items-center justify-end'>Mis citas</li>
-                <li className='hover:bg-slate-200 cursor-pointer p-1 rounded-md flex items-center justify-end'>Sin especificar</li>
+                
+                <Link href={'/my-booking'} className='hover:bg-slate-200 cursor-pointer p-1 rounded-md flex items-center justify-end'>Mis citas
+                </Link>
+               
                 <li className='hover:bg-slate-200 cursor-pointer p-1 rounded-md flex items-center justify-end'>
                   <LogoutLink>Cerrar sesión</LogoutLink>
                 </li>
