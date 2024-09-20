@@ -31,3 +31,39 @@ const DoctorList = ({doctorList,heading="Doctores Populares"}) => {
 }
 
 export default DoctorList;
+
+// import React, { useState, useEffect } from 'react';
+// import DoctorCard from './DoctorCard';
+
+// const DoctorList = ({ doctorList, heading }) => {
+//   const [isLoading, setIsLoading] = useState(true);
+//   const [doctors, setDoctors] = useState([]);
+
+//   useEffect(() => {
+//     if (doctorList) {
+//       setDoctors(doctorList);
+//       setIsLoading(false);
+//     }
+//   }, [doctorList]);
+
+//   if (isLoading) {
+//     return <div>Cargando doctores...</div>;
+//   }
+
+//   return (
+//     <div>
+//       <h2 className='font-bold text-3xl my-5 flex justify-center'>{heading}</h2>
+//       <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7 lg:grid-cols-4 justify-items-center '>
+//         {doctors.length > 0 ? (
+//           doctors.map((doctor, index) => (
+//             <DoctorCard key={index} doctor={doctor} />
+//           ))
+//         ) : (
+//           <div>No se encontraron doctores.</div>
+//         )}
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default DoctorList;

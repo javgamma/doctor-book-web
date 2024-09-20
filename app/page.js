@@ -20,8 +20,8 @@ export default function Home() {
 
   const getDoctorList = () => {
     GlobalApi.getDoctorList().then(responseDoctor => {
-      console.log(responseDoctor.data.data);
-      setDoctorList(responseDoctor.data.data);
+      console.log("MIS DOCTORES",responseDoctor.data);
+      setDoctorList(responseDoctor.data);
     });
   };
 

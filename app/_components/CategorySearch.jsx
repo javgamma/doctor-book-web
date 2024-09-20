@@ -98,9 +98,9 @@ const CategorySearch = () => {
 
   const getCategoryList = () => {
     GlobalApi.getCategory().then((response) => {
-      if (response.data && Array.isArray(response.data.data)) {
-        setCategoryList(response.data.data);
+      if (response.data && Array.isArray(response.data)) {
         console.log(response);
+        setCategoryList(response.data);
       } else {
         console.error("Unexpected response format:", response);
       }
@@ -111,6 +111,37 @@ const CategorySearch = () => {
     });
   };
 
+
+  // useEffect(() => {
+  //   getPokemons();
+  // }, []);
+
+  // const fetchData = async () => {
+  //   // const response = await fetch("https://pokeapi.co/api/v2/pokemon");
+  //   const response = await fetch("https://postgree-strapi-one.onrender.com/api/categories?populate=*");
+  //   const data = await response.json();
+  //   console.log("INITIAL DATA", data.data);
+    
+  //   return data;
+  // }
+  
+  
+  
+  // const getPokemons = async() => {
+  //   const pokemons = await fetchData();
+  //   setCategoryList(pokemons.data)
+  //   console.log("GET POKEMONS",pokemons);
+  // }
+  
+
+  // console.log("MIS CATEGORIAS LISTA PARA USAR... SIRVE???",categoryList);
+  // if (categoryList) {
+  //   console.log("RUTA DE IMAGEN",categoryList);
+    
+  // }
+  
+
+  
 
   return (
     
@@ -134,7 +165,7 @@ const CategorySearch = () => {
             className="flex flex-col text-center items-center mt-6 justify-center p-5 gap-2 bg-gray-100 m-2 rounded-xl cursor-pointer hover:scale-110 transition-all ease-in-out"
           >
             <Image
-              src={category.attributes?.Icon?.data.attributes?.url}
+              src={category.attributes?.Icon?.data.attributes?.url}        
               alt="icon"
               width={40}
               height={40}

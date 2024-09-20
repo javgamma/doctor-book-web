@@ -32,8 +32,8 @@ const CategoryList = () => {
     const getCategoryList = () => {
       GlobalApi.getCategory()
         .then((response) => {
-          // console.log(response.data.data);
-          setCategoryList(response.data.data);
+          console.log(response.data);
+          setCategoryList(response.data);
           setIsLoading(false);
         })
         .catch((error) => {

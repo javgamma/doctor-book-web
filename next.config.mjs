@@ -27,6 +27,25 @@ const nextConfig = {
           port: '',
           pathname: '/**' 
         },
+        {
+         protocol: 'https',
+          hostname: 'postgree-strapi-one.onrender.com',
+          port: '',
+          pathname: '/**' 
+        },
+        {
+         protocol: 'http',
+          hostname: 'localhost',
+          port: '3000',
+          pathname: '/**' 
+        },
+          
+        {
+          protocol: 'http',
+          hostname: 'localhost',
+          port: '1337',
+          pathname: '/uploads/**',
+        },
           
       ],
     },
