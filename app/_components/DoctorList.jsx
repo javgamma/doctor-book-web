@@ -8,7 +8,7 @@ const DoctorList = ({doctorList,heading="Doctores Populares"}) => {
     <div className='mb-10  px-10 flex-flex-col items-center '>
       <h2 className='font-bold text-3xl my-5 flex justify-center'>{heading}</h2>
       <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7 lg:grid-cols-4 justify-items-center '>
-        {doctorList.length>0?doctorList.map((doctor,index) => (
+        {doctorList.length>0?doctorList.slice(0,4).map((doctor,index) => (
           <DoctorCard key={index} doctor={doctor} />
         ))
       :
