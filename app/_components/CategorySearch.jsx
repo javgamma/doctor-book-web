@@ -99,7 +99,7 @@ const CategorySearch = () => {
   const getCategoryList = () => {
     GlobalApi.getCategory().then((response) => {
       if (response.data && Array.isArray(response.data)) {
-        console.log(response);
+        console.log("Mis categories list",response.data);
         setCategoryList(response.data);
       } else {
         console.error("Unexpected response format:", response);
@@ -110,6 +110,29 @@ const CategorySearch = () => {
       setIsLoading(false);
     });
   };
+
+  // const getCategoryList = async () => {
+  //   try {
+  //     setIsLoading(true);
+  //     const response = await GlobalApi.getCategory();
+  //     console.log("Respuesta completa:", response); // Para depuración
+  
+  //     if (response && response.data && Array.isArray(response.data.data)) {
+  //       console.log("Mis categories list", response.data.data);
+  //       setCategoryList(response.data.data);
+  //     } else {
+  //       console.error("Formato de respuesta inesperado:", response);
+  //       // Opcionalmente, puedes establecer un estado de error aquí
+  //       // setError("No se pudieron cargar las categorías");
+  //     }
+  //   } catch (error) {
+  //     console.error("Error al obtener las categorías:", error);
+  //     // Opcionalmente, puedes establecer un estado de error aquí
+  //     // setError("Error al cargar las categorías");
+  //   } finally {
+  //     setIsLoading(false);
+  //   }
+  // };
 
 
   // useEffect(() => {
@@ -165,7 +188,7 @@ const CategorySearch = () => {
             className="flex flex-col text-center items-center mt-6 justify-center p-5 gap-2 bg-gray-100 m-2 rounded-xl cursor-pointer hover:scale-110 transition-all ease-in-out"
           >
             <Image
-              src={category.attributes?.Icon?.data.attributes?.url}        
+              src={category.attributes?.Icon?.data?.attributes?.url}        
               alt="icon"
               width={40}
               height={40}

@@ -3,7 +3,7 @@
 export const categoryTranslations = {
     "Cardiologist": "Cardiólogos",
     "Dentist": "Dentistas",
-    "Orthopedist": "Traumatologos",
+    "Orthopedist": "Traumatólogo",
     "Neurologist": "Neurólogos",
     "Otologist": "Otólogos",
     // "Header" : "Cabecera",

@@ -7,8 +7,8 @@ const DoctorCard = ({doctor}) => {
   return (
     <div className='border-[1px] rounded-lg p-2 w-full max-w-[250px] mt-4 drop-shadow-xl hover:border-blue-300 hover:border-[3px] '>
       <Image 
-        // src={doctor.attributes?.image?.data?.attributes?.url}
-        src={doctor.attributes.Image?.data?.[0]?.attributes?.url}
+        src={doctor.attributes?.Image?.data?.attributes?.url}
+        // src={doctor.attributes.Image?.data?.[0]?.attributes?.url}
         alt='doctor'
         width={600}
         height={600}
@@ -19,7 +19,7 @@ const DoctorCard = ({doctor}) => {
           {translateCategory(doctor.attributes?.categories?.data?.[0]?.attributes?.Name )|| "Categoría no disponible"}
         </h2>
         <div className='pl-3 mb-2'>
-          <h2 className='font-bold'>{doctor.attributes?.name}</h2>
+          <h2 className='font-bold'>{doctor.attributes?.Name}</h2>
           <h2 className='text-primary text-sm'>{doctor.attributes?.Year_of_Experience} años</h2>
           <h2 className='text-gray-400 text-sm'>{doctor.attributes?.Address}</h2>
         </div>

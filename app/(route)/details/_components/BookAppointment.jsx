@@ -27,11 +27,11 @@ const BookAppointment = ({doctor}) => {
     const [note,setNote]=useState();
     const {user}=useKindeBrowserClient();
 
-  //   useEffect(() => {
-  //     if (!doctor || !doctor.id) {
-  //         console.error('Doctor prop is missing or does not have an id', doctor);
-  //     }
-  // }, [doctor]);
+    useEffect(() => {
+      if (!doctor || !doctor.id) {
+          console.error('Doctor prop is missing or does not have an id', doctor);
+      }
+  }, [doctor]);
 
     useEffect(()=>{
       getTime();
@@ -72,6 +72,7 @@ const BookAppointment = ({doctor}) => {
           Time:selectedTimeSlot,
           Date:formattedDate,
           doctor: doctor.data.id,
+
           Note:note
         }
       }

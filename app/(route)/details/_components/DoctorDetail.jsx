@@ -37,7 +37,8 @@ const DoctorDetail = ({doctor}) => {
       {/** Doctor image */}
       <div>
         <Image
-          src={doctor.data.attributes?.image?.data?.attributes?.url}
+          src={doctor.data?.attributes?.Image?.data?.attributes?.url}
+          // src={doctor.data.attributes?.Image?.data[0].attributes?.url}
           width={400}
           height={400}
           alt="Doctor image"
@@ -46,7 +47,7 @@ const DoctorDetail = ({doctor}) => {
       </div>
       {/** Doctor info */}
       <div className="col-span-2 mt-5 flex flex-col gap-2 items-baseline  md:pl-10 lg:px-10 ">
-        <h2 className="font-bold text-2xl">{doctor.data.attributes?.name}</h2>
+        <h2 className="font-bold text-2xl">{doctor.data.attributes?.Name}</h2>
         <h2 className="flex gap-2 text-gray-500 text-md">
           <GraduationCap />
           <span>
@@ -72,7 +73,7 @@ const DoctorDetail = ({doctor}) => {
       </div>
       <div className='p-3 border-[1px] rounded-lg mt-5  sm:w-[460px] lg:w-[850px]'>
          <h2 className='font-bold text-[20px]'>About Me</h2>
-         <p className='text-gray-500 tracking-wide mt-2'>{doctor.data.attributes.About}</p>
+         <p className='text-gray-500 tracking-wide mt-2'>{doctor.attributes?.About}</p>
        </div>
     </>
   );

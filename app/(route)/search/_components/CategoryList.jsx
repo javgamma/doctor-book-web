@@ -48,7 +48,7 @@ const CategoryList = () => {
 
 
   return (
-    <div className=" h-screen fixed mt-5 flex flex-col px-2 ">
+    <div className=" h-screen sticky mt-5 flex flex-col px-2 ">
       <Command>
         <CommandInput placeholder="Escribe la especialidad..." />
         <CommandList className="overflow-visible">

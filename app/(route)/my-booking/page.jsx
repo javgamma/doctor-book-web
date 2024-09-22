@@ -16,7 +16,7 @@ const MyBooking = () => {
 
     const getUserBookingList=()=>{
         GlobalApi.getUserBookingList(user?.email).then(resp=>{
-            console.log(resp.data.data)
+            console.log("GetBOOKINGLIST ",resp.data.data)
             setBookingList(resp.data.data);
         })
     }
@@ -31,7 +31,7 @@ const MyBooking = () => {
            type=='upcoming'? new Date(item.attributes.Date)>=new Date()
            :new Date(item.attributes.Date)<=new Date()
             )
-            console.log(result)
+            console.log("Mis citas agendadas",result)
         return result;
     }
 

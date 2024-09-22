@@ -163,7 +163,7 @@ const Header = () => {
       </div>
       {isAuthenticated ? (
         <div className="flex items-center gap-4 mr-4">
-          <span>Bienvenido, {user?.given_name || user?.email}</span>
+          <span>Hola, {user?.given_name || user?.email}</span>
           <Popover>
             <PopoverTrigger>
               {user?.picture ? (
