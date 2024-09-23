@@ -59,7 +59,7 @@ const CategoryList = () => {
                   <Link href={"/search/"+category?.attributes?.Name}
                   className={`p-2 flex gap-2 text-[12px] items-center
                    rounded-md cursor-pointer w-full 
-                  ${isSelected(category.attributes?.Name) ? 'bg-teal-100' : ''}
+                  ${isSelected(category.attributes?.Name) ? '' : ''}
                   `}>
                     <Image
                       src={category.attributes?.Icon?.data?.attributes?.url}
@@ -74,7 +74,7 @@ const CategoryList = () => {
       [1,2,3,4,5,6,7,8,9].map((item, index) => (
         <div
           key={index}
-          className="bg-slate-200 m-2 animate-pulse w-[190px] h-[30px] rounded-lg"
+          className=" m-2 animate-pulse w-[190px] h-[30px] rounded-lg"
         />))}
 
           </CommandGroup>

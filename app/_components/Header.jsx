@@ -162,15 +162,15 @@ const Header = () => {
         </ul>
       </div>
       {isAuthenticated ? (
-        <div className="flex items-center gap-4 mr-4">
+        <div className="hidden md:flex md:items-center md:gap-4 md:mr-4">
           <span>Hola, {user?.given_name || user?.email}</span>
           <Popover>
             <PopoverTrigger>
               {user?.picture ? (
                 <Image
                   src={user.picture}
-                  width={45}
-                  height={45}
+                  width={40}
+                  height={40}
                   alt="User icon"
                   className="rounded-full"
                 />

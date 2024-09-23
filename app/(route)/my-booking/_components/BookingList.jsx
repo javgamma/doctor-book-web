@@ -25,15 +25,13 @@ const BookingList = ({bookingList,expired,updateRecord}) => {
     <div>
     {bookingList.length>0?bookingList.map((item,index)=>(
         <div className=' flex gap-4 items-center border p-5 m-3 rounded-lg' key={index}>
-            <Image src={item.attributes?.doctor?.data?.attributes?.Image?.data?.attributes?.url}
-            
-
-            
+            <Image src={item.attributes?.doctor?.data?.attributes?.Image?.data?.attributes?.url} 
             className='rounded-full h-[70px] w-[70px] object-cover'
             width={70}
             height={70}
             alt='doctor-image'
             key={index}
+            layout="responsive"
             />
             <div className='flex flex-col gap-2 w-full'>
                 <h2 className='font-bold text-[18px] items-center flex justify-between'>{item.attributes.doctor?.data?.attributes?.Name}

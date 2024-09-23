@@ -180,7 +180,7 @@ const CategorySearch = () => {
     </div> */}
 
     {/** Lista de Categorías */}
-    <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6" >
+    <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-4" >
       {categoryList.length > 0 ? categoryList.map((category) => (
         <Link href={"/search/"+category.attributes?.Name} key={category.id}>
           <div

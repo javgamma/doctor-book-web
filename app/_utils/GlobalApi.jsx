@@ -156,7 +156,7 @@ const getCategory = async () => {
 
 const getDoctorList = async () => {
     try {
-        const response = await axiosClient.get('/api/doctors?populate=*');
+        const response = await axiosClient.get('api/doctors?populate=*');
         return response;
     } catch (error) {
         console.log(error);
