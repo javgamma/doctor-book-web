@@ -19,10 +19,10 @@ const Hero = () => {
         </div>
   
         <div className="lg:py-24 flex flex-col justify-center">
-        <h2 className="flex w-full text-2xl md:text-3xl justify-center font-bold    ">
+        <h2 className="flex w-full text-2xl md:text-3xl justify-center font-bold lg:justify-start">
             Encuentra tu especialista 
         </h2>
-        <h2 className='text-primary flex w-full text-3xl justify-center font-bold '>
+        <h2 className='text-primary flex w-full text-3xl justify-center font-bold lg:justify-start'>
           Agenda tu cita
         </h2>
   

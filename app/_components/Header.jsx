@@ -139,7 +139,7 @@ const menu = [
   { id: 1, name: 'Inicio', path: '/' },
   { id: 2, name: 'Descubrir', path: '/' },
   { id: 3, name: 'Contáctanos', path: '/' },
-  { id: 4, name: 'Información', path: '/' }
+ 
 ]
 
 const Header = () => {

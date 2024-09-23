@@ -534,7 +534,7 @@ const BookAppointment = ({doctor}) => {
       <DialogTrigger>
         <Button className="w-full rounded-full ">Agendar cita</Button>
       </DialogTrigger>
-      <DialogContent className="w-[340px] p-4 max-h-[90vh] overflow-y-auto md:w-[500px] lg:w-[full]">
+      <DialogContent className="w-[340px] p-4 max-h-[90vh] overflow-y-auto md:w-[1200px] lg:w-[full]">
         <DialogHeader>
           <DialogTitle className="text-xl font-bold">Agendar Cita</DialogTitle>
         </DialogHeader>
@@ -559,7 +559,7 @@ const BookAppointment = ({doctor}) => {
                 <Clock className='text-primary h-4 w-4'/>
                 Seleccione la hora
               </h2>
-              <div className='grid grid-cols-3 gap-1 max-h-[120px] overflow-y-auto'>
+              <div className='grid grid-cols-2 gap-1 max-h-[120px] overflow-y-auto'>
                 {timeSlot?.map((item, index) => (
                   <Button
                     key={index}

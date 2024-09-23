@@ -43,7 +43,7 @@ const DoctorDetail = ({doctor}) => {
           width={400}
           height={400}
           alt="Doctor image"
-          layout="responsive"
+          // layout="responsive"
           className="rounded-lg w-[200px] h-[280px] md:h-[250px] object-cover"
         />
       </div>
@@ -74,7 +74,7 @@ const DoctorDetail = ({doctor}) => {
       </div>
       </div>
       <div className='p-3 border-[1px] rounded-lg mt-5  sm:w-[460px] lg:w-[850px]'>
-         <h2 className='font-bold text-[20px]'>About Me</h2>
+         <h2 className='font-bold text-[20px]'></h2>
          <p className='text-gray-500 tracking-wide mt-2'>{doctor.data.attributes?.About}</p>
        </div>
     </>
