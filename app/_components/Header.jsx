@@ -137,8 +137,8 @@ import Logotype from './Logotype'
 
 const menu = [
   { id: 1, name: 'Inicio', path: '/' },
-  { id: 2, name: 'Descubrir', path: '/' },
-  { id: 3, name: 'Contáctanos', path: '/' },
+  { id: 2, name: 'Contacto', path: '/' },
+  { id: 3, name: 'Trabaja con nosotros', path: '/' },
  
 ]
 
