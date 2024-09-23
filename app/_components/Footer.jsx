@@ -1,70 +1,54 @@
 import React from 'react'
-import Logotype from './Logotype'
+import Link from 'next/link'
+import Image from 'next/image'
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-50">
-    <div className="relative mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8 lg:pt-24">
-      <div className="absolute end-4 top-4 sm:end-6 sm:top-6 lg:end-8 lg:top-8">
-        <a
-          className="inline-block rounded-full bg-primary p-2 text-white shadow transition hover:bg-primary-300 sm:p-3 lg:p-4"
-          href="#MainContent"
-        >
-          <span className="sr-only">Back to top</span>
   
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="size-5"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-          >
-            <path
-              fillRule="evenodd"
-              d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z"
-              clipRule="evenodd"
-            />
-          </svg>
-        </a>
-      </div>
-  
-      <div className="lg:flex lg:items-end lg:justify-between">
-        <div>
-          <div className="flex justify-center text-teal-600 lg:justify-start">
-            <Logotype/>
-          </div>
-  
-          {/* <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500 lg:text-left">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt consequuntur amet culpa
-            cum itaque neque.
-          </p> */}
-        </div>
-  
-        <ul
-          className="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:mt-0 lg:justify-end lg:gap-12"
-        >
-          <li>
-            <a className="text-gray-700 transition hover:text-gray-700/75" href="#"> Acerca de </a>
-          </li>
-  
-          <li>
-            <a className="text-gray-700 transition hover:text-gray-700/75" href="#">  </a>
-          </li>
-  
-          <li>
-            <a className="text-gray-700 transition hover:text-gray-700/75" href="#"> Projects </a>
-          </li>
-  
-          <li>
-            <a className="text-gray-700 transition hover:text-gray-700/75" href="#"> Blog </a>
-          </li>
-        </ul>
-      </div>
-  
-      <p className="mt-12 text-center text-sm text-gray-500 lg:text-right">
-        Copyright &copy; 2022. All rights reserved.
-      </p>
+  <footer className="bg-gray-50 border-t-1 rounded-lg shadow dark:bg-gray-900 ">
+  <div className="w-full  flex flex-col items-center max-w-screen-xl mx-auto p-4 md:py-8">
+    <div className="  sm:flex sm:items-center sm:justify-between gap-6 lg:gap-40">
+      <Link
+        href="/"
+        className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse"
+      >
+      <Image
+        src="https://res.cloudinary.com/dmy83dakk/image/upload/v1727132327/jdhbtgccxfsa77eseea7.png"
+        width={130}
+        height={50}
+        classname="h-8"
+        alt="Logo"
+      />
+      </Link>
+      <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white" />
+      <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+        <li>
+          <a href="#" className="hover:underline me-4 md:me-6">
+            Acerca de
+          </a>
+        </li>
+        <li>
+          <a href="#" className="hover:underline me-4 md:me-6">
+            Privacy Policy
+          </a>
+        </li>
+        <li>
+          <a href="#" className="hover:underline">
+            Contact
+          </a>
+        </li>
+      </ul>
     </div>
-  </footer>
+    <hr className="my-2 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-4" />
+    <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">
+      © 2024{" "}
+      <a href="https://flowbite.com/" className="hover:underline">
+        Mediconecta™
+      </a>
+      . Todos los derechos reservados.
+    </span>
+  </div>
+</footer>
   )
 }
 
