@@ -38,21 +38,45 @@
 // }
 /// --------**** HASTA AQUI ******
 
+//// ____ UTLTIMA CONFIG QUE ESTABA USANDO ------
+// import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server';
+// import { NextResponse } from 'next/server';
+
+// export async function middleware(request) {
+//   const session = await getKindeServerSession();
+  
+//   if (!session?.isAuthenticated()) {
+//     return NextResponse.redirect(new URL('/api/auth/login?post_login_redirect_url=/', request.url));
+//   }
+
+//   return NextResponse.next();  // Si el usuario está autenticado, continuar con la solicitud.
+// }
+
+// export const config = {
+//   matcher: ['/details/:path*'], // Aplica el middleware a rutas que comiencen con /details/
+// };
+
+///-------------_____________---------
+
+
 import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server';
 import { NextResponse } from 'next/server';
 
 export async function middleware(request) {
-  const session = await getKindeServerSession();
-  
+  const session = await getKindeServerSession(request);
+
   if (!session?.isAuthenticated()) {
-    return NextResponse.redirect(new URL('/api/auth/login?post_login_redirect_url=/', request.url));
+    const loginUrl = new URL('/api/auth/login', request.url);
+    // Añadir redirección después del login con la página protegida a la que quieres llevar al usuario
+    loginUrl.searchParams.set('post_login_redirect_url', '/protected-page');
+    
+    return NextResponse.redirect(loginUrl);
   }
 
-  return NextResponse.next();  // Si el usuario está autenticado, continuar con la solicitud.
+  return NextResponse.next(); // Si el usuario está autenticado, continuar con la solicitud
 }
 
 export const config = {
-  matcher: ['/details/:path*'], // Aplica el middleware a rutas que comiencen con /details/
+  matcher: ['/details/:path*', '/dashboard', '/profile'], // Rutas protegidas
 };
-
 
