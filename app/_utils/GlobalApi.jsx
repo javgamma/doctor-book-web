@@ -106,6 +106,8 @@ const deleteBooking=(id)=>axiosClient.delete('/api/appointments/'+id)
       
 const sendEmail=(data)=>axios.post('/api/sendEmail',data);
 
+const getDoctorListByCategory=(category) =>axiosClient.get(`/api/doctors?filters[categories][Name][$eq]=${category}&populate=*`);
+
 
 
 // export default {
@@ -162,6 +164,9 @@ const getDoctorList = async () => {
         console.log(error);
     }
 };
+
+
+  
 
 
 
@@ -244,5 +249,6 @@ export default {
     bookAppointment,
     getUserBookingList,
     deleteBooking,
-    sendEmail
+    sendEmail,
+    getDoctorListByCategory
 }

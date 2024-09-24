@@ -31,11 +31,11 @@
 //   				foreground: 'hsl(var(--popover-foreground))'
 //   			},
 //   			primary: {
-//   				DEFAULT: '#0D7DFF',
+//   				DEFAULT: '#0D7EFF',
 //   				foreground: 'hsl(var(--primary-foreground))'
 //   			},
 //   			secondary: {
-//   				DEFAULT: 'hsl(var(--secondary))',
+//   				DEFAULT: '#0956e6',
 //   				foreground: 'hsl(var(--secondary-foreground))'
 //   			},
 //   			muted: {
@@ -103,7 +103,11 @@ module.exports = {
           foreground: 'hsl(var(--primary-foreground))'
         },
         secondary: {
-          DEFAULT: 'hsl(var(--secondary))',
+          DEFAULT: '#0956e6',
+          foreground: 'hsl(var(--secondary-foreground))'
+        },
+        terciary: {
+          DEFAULT: '#374152',
           foreground: 'hsl(var(--secondary-foreground))'
         },
         muted: {

@@ -45,12 +45,13 @@ const Details = (params) => {
 
 
   return (
-    <div className=' md:px-10 min-h-screen my-5'>
-      <h2 className='ml-10 font-bold text-[22px] '>Información detallada</h2>
+    <div className=' flex  flex-col pt-3  md:items-center md:px-10  min-h-screen my-5 px-4'>
+      <h2 className='flex justify-center  font-bold text-[22px] '>Información detallada</h2>
 
-      <div className='px-5 grid grid-cols-1 sm:grid-cols-4  md:grid-cols-4 lg:grid-cols-4 '>
+      {/* <div className='px-5 grid grid-cols-1 sm:grid-cols-4  md:grid-cols-4 lg:grid-cols-4 '> */}
+        <div className='md:flex'>
         {/* Doctor Detail  */}
-       <div className='col-span-3'>
+       <div className='md:flex'>
        {doctor&&<DoctorDetail doctor={doctor}/>}
        </div>
         {/* Doctor Suggestion  */}

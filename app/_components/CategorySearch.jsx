@@ -111,59 +111,6 @@ const CategorySearch = () => {
     });
   };
 
-  // const getCategoryList = async () => {
-  //   try {
-  //     setIsLoading(true);
-  //     const response = await GlobalApi.getCategory();
-  //     console.log("Respuesta completa:", response); // Para depuración
-  
-  //     if (response && response.data && Array.isArray(response.data.data)) {
-  //       console.log("Mis categories list", response.data.data);
-  //       setCategoryList(response.data.data);
-  //     } else {
-  //       console.error("Formato de respuesta inesperado:", response);
-  //       // Opcionalmente, puedes establecer un estado de error aquí
-  //       // setError("No se pudieron cargar las categorías");
-  //     }
-  //   } catch (error) {
-  //     console.error("Error al obtener las categorías:", error);
-  //     // Opcionalmente, puedes establecer un estado de error aquí
-  //     // setError("Error al cargar las categorías");
-  //   } finally {
-  //     setIsLoading(false);
-  //   }
-  // };
-
-
-  // useEffect(() => {
-  //   getPokemons();
-  // }, []);
-
-  // const fetchData = async () => {
-  //   // const response = await fetch("https://pokeapi.co/api/v2/pokemon");
-  //   const response = await fetch("https://postgree-strapi-one.onrender.com/api/categories?populate=*");
-  //   const data = await response.json();
-  //   console.log("INITIAL DATA", data.data);
-    
-  //   return data;
-  // }
-  
-  
-  
-  // const getPokemons = async() => {
-  //   const pokemons = await fetchData();
-  //   setCategoryList(pokemons.data)
-  //   console.log("GET POKEMONS",pokemons);
-  // }
-  
-
-  // console.log("MIS CATEGORIAS LISTA PARA USAR... SIRVE???",categoryList);
-  // if (categoryList) {
-  //   console.log("RUTA DE IMAGEN",categoryList);
-    
-  // }
-  
-
   
 
   return (
