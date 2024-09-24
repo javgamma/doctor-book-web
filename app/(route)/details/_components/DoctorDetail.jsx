@@ -7,32 +7,11 @@ import BookAppointment from './BookAppointment';
 
 const DoctorDetail = ({doctor}) => {
 
-    const socialMediaList=[
-        {
-            id:1,
-            icon:'/youtube.png',
-            url:''
-        },
-        {
-            id:2,
-            icon:'/linkedin.png',
-            url:''
-        },
-        {
-            id:3,
-            icon:'/twitter.png',
-            url:''
-        },
-        {
-            id:4,
-            icon:'/facebook.png',
-            url:''
-        }
-    ]
+    
 
     console.log(doctor);
   return (
-    <>
+    <div>
     <div className=" grid grid-cols-1 md:grid-cols-3 justify-items-center  sm:w-[460px] md:justify-items-start border p-5 mt-5 rounded-xl lg:w-[850px]">
       {/** Doctor image */}
       <div>
@@ -77,7 +56,7 @@ const DoctorDetail = ({doctor}) => {
          <h2 className='font-bold text-[20px]'></h2>
          <p className='text-gray-500 tracking-wide mt-2'>{doctor.data.attributes?.About}</p>
        </div>
-    </>
+    </div>
   );
 }
 
