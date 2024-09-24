@@ -118,7 +118,7 @@ const CategorySearch = () => {
   //     setIsLoading(true);
   //     const response = await GlobalApi.getCategory();
   //     console.log("Respuesta completa:", response); // Para depuración
-
+  
   //     if (response && response.data && Array.isArray(response.data.data)) {
   //       console.log("Mis categories list", response.data.data);
   //       setCategoryList(response.data.data);
@@ -136,6 +136,7 @@ const CategorySearch = () => {
   //   }
   // };
 
+
   // useEffect(() => {
   //   getPokemons();
   // }, []);
@@ -145,21 +146,27 @@ const CategorySearch = () => {
   //   const response = await fetch("https://postgree-strapi-one.onrender.com/api/categories?populate=*");
   //   const data = await response.json();
   //   console.log("INITIAL DATA", data.data);
-
+    
   //   return data;
   // }
-
+  
+  
+  
   // const getPokemons = async() => {
   //   const pokemons = await fetchData();
   //   setCategoryList(pokemons.data)
   //   console.log("GET POKEMONS",pokemons);
   // }
+  
 
   // console.log("MIS CATEGORIAS LISTA PARA USAR... SIRVE???",categoryList);
   // if (categoryList) {
   //   console.log("RUTA DE IMAGEN",categoryList);
-
+    
   // }
+  
+
+  
 
   return (
     <div className="mb-10 items-center flex flex-col gap-4 px-5">

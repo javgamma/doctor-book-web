@@ -1,17 +1,38 @@
-import { translateCategory } from '@/app/_utils/translations';
-import { Button } from '@/components/ui/button';
-import { GraduationCap, MapPin } from 'lucide-react';
-import Image from 'next/image'
-import React from 'react'
-import BookAppointment from './BookAppointment';
+import { translateCategory } from "@/app/_utils/translations";
+import { GraduationCap, MapPin } from "lucide-react";
+import Image from "next/image";
+import React from "react";
+import BookAppointment from "./BookAppointment";
+import DoctorSuggestionList from "./DoctorSuggestionList";
 
 const DoctorDetail = ({doctor}) => {
 
-    
+    const socialMediaList=[
+        {
+            id:1,
+            icon:'/youtube.png',
+            url:''
+        },
+        {
+            id:2,
+            icon:'/linkedin.png',
+            url:''
+        },
+        {
+            id:3,
+            icon:'/twitter.png',
+            url:''
+        },
+        {
+            id:4,
+            icon:'/facebook.png',
+            url:''
+        }
+    ]
 
     console.log(doctor);
   return (
-    <div>
+    <>
     <div className=" grid grid-cols-1 md:grid-cols-3 justify-items-center  sm:w-[460px] md:justify-items-start border p-5 mt-5 rounded-xl lg:w-[850px]">
       {/** Doctor image */}
       <div>
@@ -44,20 +65,15 @@ const DoctorDetail = ({doctor}) => {
             doctor.data.attributes?.categories?.data?.[0]?.attributes?.Name
           )?.replace(/s$/, "") || "Categoría no disponible"}
         </h2>
-        {/* <div className="flex gap-3 mt-4">
-          {socialMediaList.map((item, index) => (
-            <Image src={item.icon} key={index} width={30} height={30} />
-          ))}
-        </div> */}
-        <BookAppointment doctor={doctor}/>
+        <DoctorSuggestionList category={doctorCategory} />
       </div>
       </div>
       <div className='p-3 border-[1px] rounded-lg mt-5  sm:w-[460px] lg:w-[850px]'>
          <h2 className='font-bold text-[20px]'></h2>
          <p className='text-gray-500 tracking-wide mt-2'>{doctor.data.attributes?.About}</p>
        </div>
-    </div>
+    </>
   );
-}
+};
 
-export default DoctorDetail
+export default DoctorDetail;
