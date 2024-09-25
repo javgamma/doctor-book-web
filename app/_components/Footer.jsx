@@ -5,7 +5,7 @@ import { Activity } from 'lucide-react'
 const Footer = () => {
   return (
   
-  <footer className="bg-blue-50 border-t-1 rounded-lg shadow dark:bg-gray-900 ">
+  <footer className="bg-gray-50 border-t-1 rounded-lg shadow dark:bg-gray-900 ">
   <div className="w-full  flex flex-col items-center max-w-screen-xl mx-auto p-4 md:py-8">
     <div className="  sm:flex sm:items-center sm:justify-between gap-6 lg:gap-52">
       <Link
