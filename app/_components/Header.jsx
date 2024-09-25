@@ -28,10 +28,10 @@ const Header = () => {
   console.log(user);
 
   return (
-    <div className="flex items-center justify-between p-4 shadow-sm">
-      <div className="flex items-center gap-10">
+    <div className="flex items-center justify-between p-4  bg-slate-50">
         <Logotype />
-        <ul className="md:flex gap-8 hidden">
+      <div className="flex items-center gap-10">
+        <ul className="md:flex gap-8 lg:flex  hidden">
           {menu.map((item) => (
             <Link href={item.path} key={item.id}>
               <li className="hover:text-primary hover:scale-105 transition-all ease-in-out">
