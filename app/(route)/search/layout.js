@@ -6,13 +6,13 @@ const layout = ({children}) => {
   return (
     <div className="grid grid-cols-4 ">
         <div className='hidden md:block'>
-        {/* //Categories */}
         <CategoryList/>
         </div>
         <div className="col-span-4 md:col-span-3 min-h-screen">
+         
         {children}
         </div>
-        {/* <Footer/> */}
+       
     </div>
   );
 }

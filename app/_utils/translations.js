@@ -6,15 +6,13 @@ export const categoryTranslations = {
     "Orthopedist": "Traumatólogos",
     "Neurologist": "Neurólogos",
     "Otologist": "Otólogos",
-    // "Header" : "Cabecera",
     "Surgeon": "Cirujanos",
     "Psychiatrist": "Psiquiatras",
     "Ophthalmologist": "Oftalmólogos"
 
-    // Añade todas las categorías que tienes
   };
   
   export function translateCategory(slug) {
-    return categoryTranslations[slug] || slug; // Devuelve la traducción si existe, o el slug original si no
+    return categoryTranslations[slug] || slug;
   }
   
