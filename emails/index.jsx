@@ -13,9 +13,7 @@ import {
 
   import * as React from "react";
   
-//   interface KoalaWelcomeEmailProps {
-//     userFirstname: string;
-//   }
+
   
   const baseUrl = process.env.VERCEL_URL
     ? `https://${process.env.VERCEL_URL}`
@@ -68,9 +66,7 @@ import {
     </Html>
   );
   
-//   KoalaWelcomeEmail.PreviewProps = {
-//     userFirstname: "Alan",
-//   } as KoalaWelcomeEmailProps;
+
   
   export default EmailTemplate;
   
