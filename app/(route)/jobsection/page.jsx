@@ -8,12 +8,13 @@ const WorkWithUs = () => {
       <div className="w-full max-w-6xl bg-white shadow-lg rounded-lg p-8 grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Texto descriptivo */}
         <div className="flex flex-col justify-center">
-          <h1 className="text-3xl font-bold text-[#0056F7] mb-4">Únete a nuestro equipo</h1>
+          <h1 className="text-3xl font-bold text-primary mb-4">Únete a nuestro equipo</h1>
           <p className="text-gray-700 text-lg mb-6">
             En Mediconecta estamos buscando profesionales apasionados por la salud y el bienestar de las personas.
+
             Si quieres formar parte de un equipo comprometido y en crecimiento, ¡esta es tu oportunidad!
           </p>
-          <Button className="bg-[#0056F7] text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+          <Button className="bg-primary text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Enviar CV
           </Button>
         </div>
