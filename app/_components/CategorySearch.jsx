@@ -1,6 +1,5 @@
 "use client";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
@@ -54,7 +53,6 @@ const CategorySearch = () => {
                     height={40}
                   />
                   <label>{translateCategory(category.attributes?.Name)}</label>{" "}
-                  {/* Traducción */}
                 </div>
               </Link>
             ))
