@@ -10,6 +10,7 @@ export async function POST(req){
   const response = await req.json()
     try {
         const data=await resend.emails.send({
+          from: 'Acme <onboarding@resend.dev>',
             to: [response.data.Email],
             subject: 'Confirmacion cita médica',
             react: EmailTemplate({response})
