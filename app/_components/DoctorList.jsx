@@ -7,7 +7,7 @@ const DoctorList = ({doctorList,heading="Doctores Populares"}) => {
   return (
     <div className=' pb-20 flex-flex-col items-center justify-items-center  bg-blue-50'>
       <h2 className='font-bold pt-10  text-3xl  flex justify-center'>{heading}</h2>
-      <div className=' grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  lg:grid-cols-4   lg:gap-14 lg:px-10 justify-items-center '>
+      <div className=' grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2  lg:grid-cols-4   lg:gap-14 lg:px-10 justify-items-center '>
         {doctorList.length>0?doctorList.slice(0,4).map((doctor,index) => (
           <DoctorCard key={index} doctor={doctor} />
         ))

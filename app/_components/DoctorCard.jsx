@@ -53,7 +53,7 @@ const DoctorCard = ({ doctor }) => {
   return (
     <Link href={'/details/' + doctor?.id} className="">
       <div className="flex flex-col justify-between m-4 border border-gray-300 rounded-lg p-4 w-full max-w-xs bg-slate-100 shadow-lg hover:border-blue-300 hover:border-2 transition-all duration-300 mt-8 mx-auto">
-        <div className="relative w-[150px] h-60">
+        <div className="relative w-48 h-56">
           <Image
             src={doctor.attributes?.Image?.data?.attributes?.url}
             alt="doctor"
