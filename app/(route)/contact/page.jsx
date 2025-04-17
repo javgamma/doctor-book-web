@@ -1,8 +1,8 @@
 import React from 'react';
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input';  
-import { Textarea } from '@/components/ui/textarea'; // Textarea de la librería shadcn
-import { Mail, Phone, MapPin } from 'lucide-react'; // Iconos desde Lucide
+import { Textarea } from '@/components/ui/textarea'; 
+import { Mail, Phone, MapPin } from 'lucide-react';
 
 const ContactPage = () => {
   return (

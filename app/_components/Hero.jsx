@@ -25,7 +25,7 @@ const Hero = () => {
 
           <div className="lg:py-24 flex flex-col justify-start items-center">
             <h2 className="flex text-terciary w-full text-2xl md:text-3xl justify-center font-bold lg:text-4xl  lg:mb-3 lg:justify-start">
-              Tu médico especialista, ahora
+              Tu médico especialista, ahora mismo
             </h2>
             <h2 className="text-primary flex w-full text-3xl justify-center font-bold lg:text-4xl lg:justify-start">
               más cerca de ti

@@ -32,6 +32,7 @@ export default function Home() {
    <Hero/>
    <CategorySearch/>
    <DoctorList doctorList={doctorList}/>
+   
   </div>
   );
 }

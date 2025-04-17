@@ -46,6 +46,12 @@ const nextConfig = {
           port: '1337',
           pathname: '/uploads/**',
         },
+        {
+          protocol: 'https',
+          hostname: 'st.depositphotos.com',
+          port: '',
+          pathname: '/**',
+        },
           
       ],
     },
